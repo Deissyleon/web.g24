@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumir Api Rest Apex</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="js/js/cliente.js"></script>
+    <script src="js/js/cars.js"></script>
+    <script src="js/js/message.js"></script>
+</head>
+
+<body>
+ 
+
+    <hr>
+    <h1>CLIENTES</h1>
+    <hr>
+
+    <table>
+        <tr>
+            <td>
+                <h3>INGRESAR USUARIO</h3>
+            </td>
+            <td>
+                <h3>LISTA USUARIOS</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <lavel>
+                    ingrese el ID
+                </lavel>
+                <input type="number" id="id">
+
+                <br><br>
+                <lavel>
+                    ingrese su nombre
+                </lavel>
+                <input type="text" id="nombre">
+
+
+                <br><br>
+                <lavel>
+                    ingrese su email
+                </lavel>
+                <input type="text" id="email">
+
+                <br><br>
+                <lavel>
+                    ingrese su edad
+                </lavel>
+                <input type="number" id="edad">
+
+                <br><br>
+                <br>
+                
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td width="30px">
+                            ID
+                        </td>
+                        <td width="150px">
+                            NOMBRE
+                        </td>
+                        <td width="200px">
+                            EMAIL
+                        </td>
+                        <td width="60px">
+                            EDAD
+                        </td>
+                        <td width="100px">
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <table id="lista_usuarios">
+                            
+
+                        </table>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="agregar_cliente()">Guardar</button>
+                <button onclick="modificar_cliente()">Actualizar</button>
+
+            </td>
+            <td>
+                <button onclick="mostrar_cliente()">Mostrar cliente</button>
+                
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <hr>
+    <h1>VEHICULOS</h1>
+    <hr>
+    <!--_____________________________________________________________________________-->
+    <table>
+        <tr>
+            <td>
+                <h3>INGRESAR VEHICULOS</h3>
+            </td>
+            <td>
+                <h3>LISTA DE VEHICULOS</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <lavel>
+                    Ingrese el ID 
+                </lavel>
+                <input type="number" id="idcar">
+
+                <br><br>
+                <lavel>
+                    Ingrese la marca
+                </lavel>
+                <input type="text" id="brand">
+
+
+                <br><br>
+                <lavel>
+                    Ingrese el modelo
+                </lavel>
+                <input type="number" id="model">
+
+                <br><br>
+                <lavel>
+                    Ingrese Category_Id
+                </lavel>
+                <input type="number" id="category_car">
+
+                <br><br>
+                <br>
+                
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td width="60px">
+                            ID
+                        </td>
+                        <td width="150px">
+                            MARCA
+                        </td>
+                        <td width="200px">
+                            MODELO
+                        </td>
+                        <td width="60px">
+                            CATEGORY_ID
+                        </td>
+                        <td width="100px">
+                            
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <table id="lista_de_car">
+                            
+
+                        </table>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="agregar_car()">Guardar</button>
+                <button onclick="modificar_car()">Actualizar</button>
+
+            </td>
+            <td>
+                <button onclick="mostrar_car()">Mostrar vehiculos</button>
+                
+            </td>
+        </tr>
+    </table>
+
+
+<hr>
+<hr>
+<h1>MENSAJES</h1>
+<hr>
+<!--_____________________________________________________________________________-->
+<table>
+    <tr>
+        <td>
+            <h3>MENSAJE</h3>
+        </td>
+        <td>
+            <h3>REGISTRO DE MENSAJE</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+
+            <lavel>
+                Ingrese el ID 
+            </lavel>
+            <input type="number" id="idmns">
+
+            <br><br>
+            <lavel>
+                Nuevo Mensaje
+            </lavel>
+            <textarea id="mensaje" rows="10"cols=50></textarea>
+
+
+            <br><br>
+            <br>
+            
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td width="30px">
+                        ID
+                    </td>
+                    <td width="200px">
+                        TEXTO DEL MENSAJE 
+                    </td>
+                    <td width="100px">
+                        
+                    </td>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <table id="lista_mensajes">
+                        
+
+                    </table>
+                </tr>
+                
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="agregar_mensaje()">Enviar</button>
+
+        </td>
+        <td>
+            <button onclick="mostrar_mensaje()">Mostrar Mensaje</button>
+            
+        </td>
+    </tr>
+    <table>
+        <tr>
+            <td id="leer_idmsn">
+
+            </td>
+        </tr>
+        <tr>
+            <td id="leer_mensaje">
+
+            </td>
+        </tr>
+    </table>
+</table>
+
+</body>
+<script>
+    mostrar_cliente();
+    mostrar_car();
+    mostrar_mensaje();
+</script>
+
+</html>
+            
